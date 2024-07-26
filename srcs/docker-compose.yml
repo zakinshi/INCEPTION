@@ -1,0 +1,61 @@
+version: '3.8'
+
+services:
+  mariadb:
+    container_name: mariadb
+    build: ./requirements/mariadb/
+    image: mariadb:zak
+    env_file:
+      - .env
+    networks:
+      - zaknetwork
+    volumes:
+      - dataBase_V:/var/lib/mysql
+    restart: always
+
+  wordpress:
+    container_name: wordpress
+    build: ./requirements/wordpress/
+    image: wordpress:zak
+    env_file:
+      - .env
+    volumes:
+      - wordPress_V:/var/www/html
+    depends_on:
+      - mariadb
+    networks:
+      - zaknetwork
+    restart: always
+
+  nginx:
+    container_name: nginx
+    build: ./requirements/nginx/
+    image: nginx:zak
+    ports:
+      - 443:443
+    env_file:
+      - .env
+    depends_on:
+      - wordpress
+    networks:
+      - zaknetwork
+    volumes:
+      - wordPress_V:/var/www/html
+    restart: always
+
+networks:
+  zaknetwork:
+
+
+volumes:
+  dataBase_V:
+    driver_opts:
+      o: bind
+      type: none
+      device: /Users/zakbouha/Desktop/data/db
+  
+  wordPress_V:
+    driver_opts:
+      o: bind
+      type: none
+      device: /Users/zakbouha/Desktop/data/wp
