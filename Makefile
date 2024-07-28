@@ -13,9 +13,9 @@ rm_img:
 	@docker system prune -af --volumes
 
 deleteData:
-	@rm -rf ../data/wp/*
-	@rm -rf ../data/db/*
-	chmod 777 ../data/*
+	@rm -rf /home/zakbouha/data/wordpress/*
+	@rm -rf /home/zakbouha/data/database/*
+	chmod 777 /home/zakbouha/data/*
 
 
 fullclean : down rm_img rm_vol deleteData

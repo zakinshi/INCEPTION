@@ -52,10 +52,10 @@ volumes:
     driver_opts:
       o: bind
       type: none
-      device: /Users/zakbouha/Desktop/data/db
+      device: /home/zakbouha/data/database
   
   wordPress_V:
     driver_opts:
       o: bind
       type: none
-      device: /Users/zakbouha/Desktop/data/wp
+      device: /home/zakbouha/data/wordpress
