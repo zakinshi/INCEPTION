@@ -32,7 +32,7 @@ This project consists of building a scalable and secure web server using **Docke
   * run : ```cd inception```
   * run you docker : check this [Doc](https://docs.docker.com/engine/install/) , if it ur first time 🤓
   * finally run : ```make all```
-** If everything is set up correctly, the download should begin shortly. **
+**If everything is set up correctly, the download should begin shortly.**
 
-** Built with precision, passion, and a commitment to clean **
-# Grateful for your time and interest — every contribution and insight helps this project grow stronger.
+**Built with precision, passion, and a commitment to clean**
+### Grateful for your time and interest — every contribution and insight helps this project grow stronger.
