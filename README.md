@@ -35,4 +35,4 @@ This project consists of building a scalable and secure web server using **Docke
 **If everything is set up correctly, the download should begin shortly.**
 
 **Built with precision, passion, and a commitment to clean**
-### Grateful for your time and interest — every contribution and insight helps this project grow stronger.
+### Grateful for your time and interest Every contribution and insight helps this project grow stronger.
